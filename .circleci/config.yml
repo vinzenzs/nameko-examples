@@ -71,7 +71,7 @@ workflows:
           requires:
             - test
       - push-images:
-	  context: Registry
+          context: Registry
           requires:
             - build_images
           filters:
