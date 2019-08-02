@@ -3,7 +3,7 @@ build-image:
 
 docker-tag:
 	docker tag nameko/nameko-example-gateway:$(FROM_TAG) \
-	registry.nextpart.io:443/nextpart/nameko-example-gateway:$(TAG)
+	$(DOCKER_REG)/$(DOCKER_NAMESPACE)/nameko-example-gateway:$(TAG)
 
 push-image:
-	docker push registry.nextpart.io:443/nextpart/nameko-example-gateway:$(TAG)
+	docker push $(DOCKER_REG)/$(DOCKER_NAMESPACE)/nameko-example-gateway:$(TAG)
