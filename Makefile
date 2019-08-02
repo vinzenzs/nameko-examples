@@ -43,7 +43,7 @@ docker-tag:
 	for image in $(IMAGES) ; do make -C $$image docker-tag; done
 
 docker-login:
-	docker login https://registry.nextpart.io/ --password=$(DOCKER_PASSWORD) --username=$(DOCKER_USERNAME)
+	docker login $(DOCKER_REG) --password=$(DOCKER_PASSWORD) --username=$(DOCKER_USERNAME)
 
 push-images:
 	for image in $(IMAGES) ; do make -C $$image push-image; done
