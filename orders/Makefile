@@ -3,7 +3,7 @@ build-image:
 
 docker-tag:
 	docker tag nameko/nameko-example-orders:$(FROM_TAG) \
-	nameko/nameko-example-orders:$(TAG)
+	registry.nextpart.io:443/nextpart/nameko-example-orders:$(TAG)
 
 push-image:
-	docker push nameko/nameko-example-orders:$(TAG)
+	docker push registry.nextpart.io:443/nextpart/nameko-example-orders:$(TAG)
